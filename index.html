@@ -2,6 +2,8 @@
 <head>
 <meta charset="utf-8">    
 <title>CoronaLive</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">        
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -32,7 +34,7 @@
           ['Switzerland', 6575, 75],
           ['Netherlands', 3640, 137],
           ['Belgium', 2815, null],
-          ['RU', 306, null]
+          ['Russia', 306, null]
                         
         ]);
 
@@ -48,13 +50,13 @@
       }
     </script>
 </head>
-<header>
-    <h1>GeoCorona<span>.</span></h1>
-</header>    
 <body>
-    <div>
-        <p style="color: red">Last Updated: 03:00 HRS 22 March 2020-------Total Confirmed Cases:307,280-------Total Deaths:13,049-------Total Recovered:92,378</p>
-    </div>
+    <nav class="navbar fixed-top navbar-light bg-dark">
+       <p id="name">GeoCorona.</p>
+       <div>
+        <p id="stats" style="color: red">Last Updated: 03:00 HRS 22 March 2020-------Total Confirmed Cases:307,280-------Total Deaths:13,049-------Total Recovered:92,378</p>
+        </div>
+    </nav>
     <div id="regions_div" class="chart"></div>
 </body>
 </html>
