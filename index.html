@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">    
+<title>CoronaLive</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">        
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Total Confirmed', 'Total Deaths'],
+          ['Germany', 22213, 84],
+          ['United States', 24128, 285],
+          ['Brazil', 1021, null],
+          ['Canada', 1137, 19],
+          ['India', 330, 4],
+          ['Pakistan', 730, 3], 
+          ['China', 81349, 3259],
+          ['Italy', 53578, 4825],    
+          ['Spain', 25374, 1375],
+          ['United Kingdom', 5049, 1],
+          ['Iran', 20610, null],
+          ['South Korea', 8799, null],
+          ['Switzerland', 6575, 75],
+          ['Netherlands', 3640, 137],
+          ['Belgium', 2815, null],
+          ['RU', 306, null]
+                        
+        ]);
+
+        var options = {
+            colorAxis: {colors: ['#f79494', '#f73e3e', '#ff0000']},
+            backgroundColor: 'white',
+ 
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<header>
+    <h1>GeoCorona<span>.</span></h1>
+</header>    
+<body>
+    <div>
+        <p style="color: red">Last Updated: 03:00 HRS 22 March 2020-------Total Confirmed Cases:307,280-------Total Deaths:13,049-------Total Recovered:92,378</p>
+    </div>
+    <div id="regions_div" class="chart"></div>
+</body>
+</html>
